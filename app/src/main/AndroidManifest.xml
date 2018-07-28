@@ -8,12 +8,10 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".DoaPagi"
-            android:label="@string/app_name">
-
-        </activity>
+            android:name=".activity.MorningDuaActivity"
+            android:label="@string/app_name"></activity>
         <activity
-            android:name=".DoaSore"
+            android:name=".activity.EveningDuaActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,5 +20,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

@@ -1,4 +1,4 @@
-package com.alexzh.tutorial.multiplerowlayoutsrecyclerview;
+package com.alexzh.tutorial.multiplerowlayoutsrecyclerview.model;
 
 public class ModelDoa {
 

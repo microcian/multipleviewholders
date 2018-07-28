@@ -1,14 +1,19 @@
-package com.alexzh.tutorial.multiplerowlayoutsrecyclerview;
+package com.alexzh.tutorial.multiplerowlayoutsrecyclerview.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.alexzh.tutorial.multiplerowlayoutsrecyclerview.model.ModelDoa;
+import com.alexzh.tutorial.multiplerowlayoutsrecyclerview.viewholder.PagiViewHolder;
+import com.alexzh.tutorial.multiplerowlayoutsrecyclerview.R;
+import com.alexzh.tutorial.multiplerowlayoutsrecyclerview.viewholder.SoreViewHolder;
+
 import java.util.List;
 
-import static com.alexzh.tutorial.multiplerowlayoutsrecyclerview.ModelDoa.DOA_PAGI;
-import static com.alexzh.tutorial.multiplerowlayoutsrecyclerview.ModelDoa.DOA_SORE;
+import static com.alexzh.tutorial.multiplerowlayoutsrecyclerview.model.ModelDoa.DOA_PAGI;
+import static com.alexzh.tutorial.multiplerowlayoutsrecyclerview.model.ModelDoa.DOA_SORE;
 
 public class AdapterDoa extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
@@ -21,9 +26,7 @@ public class AdapterDoa extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         switch (viewType) {
-
             case DOA_PAGI:
                 View vieu = LayoutInflater.from(parent.getContext()).inflate(R.layout.content_doa, parent, false);
                 PagiViewHolder rcv = new PagiViewHolder(vieu);
@@ -39,13 +42,9 @@ public class AdapterDoa extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-
         ModelDoa object = mList.get(position);
-
         if (object != null) {
-
             switch (object.getType()) {
-
                 case DOA_PAGI:
                     ((PagiViewHolder) holder).mTitle.setText(object.getName());
                     break;
